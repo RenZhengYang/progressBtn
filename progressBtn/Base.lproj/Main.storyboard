@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmo-zd-xYU" customClass="ProgressView">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6y-Jq-meN">
+                                        <frame key="frameInset" width="57" height="73"/>
+                                        <state key="normal" backgroundImage="Play"/>
+                                        <connections>
+                                            <action selector="playPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSl-eM-jW8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29364825559957841" green="0.73648320412742285" blue="0.81152999159999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="JJg-T0-euZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="S6y-Jq-meN" secondAttribute="trailing" constant="-5" id="Pr2-Pq-Wja"/>
+                                    <constraint firstItem="S6y-Jq-meN" firstAttribute="leading" secondItem="fmo-zd-xYU" secondAttribute="leading" constant="-5" id="QMc-i2-3HJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="dRY-2o-m21"/>
+                                    <constraint firstItem="S6y-Jq-meN" firstAttribute="top" secondItem="fmo-zd-xYU" secondAttribute="top" constant="-5" id="gJ2-g9-Rep"/>
+                                    <constraint firstAttribute="bottom" secondItem="S6y-Jq-meN" secondAttribute="bottom" constant="-5" id="uHn-9k-7sD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29364825560000002" green="0.73648320410000001" blue="0.81152999159999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fmo-zd-xYU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="8j9-w7-VTE"/>
+                            <constraint firstItem="fmo-zd-xYU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="55" id="Ssd-vn-zzv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="S6y-Jq-meN" id="dLG-gt-Pi3"/>
+                        <outlet property="progress" destination="fmo-zd-xYU" id="GAa-38-JFb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.0809595202399"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Play" width="57" height="57"/>
+    </resources>
+</document>
